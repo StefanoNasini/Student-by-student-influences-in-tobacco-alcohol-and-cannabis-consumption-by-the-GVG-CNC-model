@@ -9,6 +9,10 @@ clear n_individuals_
 
 write_school_data(network_, features_sel, n_items, n_individuals);
 
+if true % write graph data in csv format
+   csvwrite("graph_school.csv");
+end
+
 
 function [network_, features_sel] =  read_and_process()
 %% setup
@@ -205,6 +209,3 @@ function [] = write_school_data(EI, V, n_items, n_individuals)
     clear j;
     disp("graph_data_school written successfully.")
 end
-
-
-
